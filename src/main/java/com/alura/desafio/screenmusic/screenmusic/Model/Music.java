@@ -18,6 +18,12 @@ public class Music {
     @ManyToOne
     private Artist artist;
 
+    public Music(String musicName, String albumName) {
+        this.musicName = musicName;
+        this.albumName = albumName;
+    }
+    public Music() {}
+
     public Long getId() {
         return id;
     }
@@ -55,6 +61,6 @@ public class Music {
         return  "id=" + id +
                 ", musicName='" + musicName + '\'' +
                 ", albumName='" + albumName + '\'' +
-                ", artist=" + artist;
+                ", artist=" + artist.getName();
     }
 }

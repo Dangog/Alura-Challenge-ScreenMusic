@@ -27,6 +27,9 @@ public class Artist {
         this.style = style;
     }
 
+    public Artist() {
+    }
+
     @Override
     public String toString() {
         return "name='" + name + '\'' +
